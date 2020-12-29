@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>Skmt.com.officeutq</groupId>
 	<artifactId>Skmt</artifactId>
-	<version>0.0.1-SANPSHOT</version>
+	<version>0.0.9-snapshot</version>
 	<packaging>war</packaging>
 	<name>Skmt</name>
 	<description>Private project for Spring Boot</description>
