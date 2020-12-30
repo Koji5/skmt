@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	layout:decorator="layout">
+<html lang="ja" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout2}"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>タイトル</title>
 	</head>
 	<body>
-		<div layout:decorator="layout">
-			<div layout:fragment="pageContents">
-
-			</div>
+		<div layout:fragment="header">タイトル</div>
+		<div layout:fragment="contents">
+			コンテンツ
 		</div>
 	</body>
 </html>

@@ -1,34 +1,31 @@
 <!DOCTYPE html>
-<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	layout:decorator="layout">
+<html lang="ja" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout2}"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="UTF-8">
 		<title>ログインフォーム</title>
 	</head>
 	<body>
-		<div layout:decorator="layout">
-			<div layout:fragment="pageContents">
-				<h3>ログインフォーム</h3>
-<!-- 				<div th:if="${param.containsKey('error')}">
-					<span th:text="${SPRING_SECURITY_LAST_EXCEPTION.message}"></span>
-				</div> -->
-				<form action="./index.html">
-					<table>
-						<tr>
-							<td><label for="username">ユーザー名</label></td>
-							<td><input type="text" id="username" name="username"/></td>
-						</tr>
-						<tr>
-							<td><label for="password">パスワード</label></td>
-							<td><input type="password" id="password" name="password"/></td>
-						</tr>
-						<tr>
-							<td>&nbsp;</td>
-							<td><button type="submit">ログイン</button></td>
-						</tr>
-					</table>
-				</form>
-			</div>
+		<div layout:fragment="header">ログインフォーム</div>
+		<div layout:fragment="contents">
+			<form action="./index.html">
+				<table>
+					<tr>
+						<td><label for="username">ユーザー名</label></td>
+						<td><input type="text" id="username" name="username"/></td>
+					</tr>
+					<tr>
+						<td><label for="password">パスワード</label></td>
+						<td><input type="password" id="password" name="password"/></td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td><button type="submit">ログイン</button></td>
+					</tr>
+				</table>
+			</form>
 		</div>
 	</body>
 </html>

@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	layout:decorator="layout">
+<html lang="ja" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout2}"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="UTF-8">
 		<title>skmt index</title>
 	</head>
 	<body>
-		<div layout:decorator="layout">
-			<div layout:fragment="pageContents">
-				<div>index</div>
-				<div><a th:href="@{/test001}">test001 データベース接続テスト テーブル参照</a></div>
-				<div><a th:href="@{/test002}">test002 データベース接続テスト テーブル作成</a></div>
-			</div>
+		<div layout:fragment="header">INDEX</div>
+		<div layout:fragment="contents">
+			<table>
+				<tr>
+					<td>test001</td>
+					<td><a th:href="@{/test001}">データベース接続テスト テーブル参照</a></td>
+				</tr>
+				<tr>
+					<td>test002</td>
+					<td><a th:href="@{/test002}">データベース接続テスト テーブル作成</a></td>
+				</tr>
+			</table>
 		</div>
 	</body>
 </html>
