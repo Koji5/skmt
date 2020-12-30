@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout">
+	<head>
+		<meta charset="UTF-8">
+		<title>test001 データベース接続テスト</title>
+	</head>
+	<body>
+		<div layout:decorator="layout">
+			<div layout:fragment="pageContents">
+				<div>userName : </div>
+				<div th:text="${userName}"></div>
+			</div>
+		</div>
+	</body>
+</html>
