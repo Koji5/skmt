@@ -4,21 +4,23 @@
 	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org">
 	<head>
-		<meta charset="UTF-8">
 		<title>ログインフォーム</title>
 	</head>
 	<body>
 		<div layout:fragment="header">ログインフォーム</div>
 		<div layout:fragment="contents">
-			<form action="./index.html">
+			<div class="alert alert-danger" role="alert" th:if="${isError}">
+				ユーザー名、またはパスワードが正しくありません！
+			</div>
+			<form name="loginForm" method="post" th:action="@{authenticate}">
 				<table>
 					<tr>
 						<td><label for="username">ユーザー名</label></td>
-						<td><input type="text" id="username" name="username"/></td>
+						<td><input type="text" name="username"/></td>
 					</tr>
 					<tr>
 						<td><label for="password">パスワード</label></td>
-						<td><input type="password" id="password" name="password"/></td>
+						<td><input type="password" name="password"/></td>
 					</tr>
 					<tr>
 						<td>&nbsp;</td>

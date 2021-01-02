@@ -4,22 +4,12 @@
 	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org">
 	<head>
-		<meta charset="UTF-8">
-		<title>skmt index</title>
+		<title>SKMT TOP</title>
 	</head>
 	<body>
-		<div layout:fragment="header">INDEX</div>
+		<div layout:fragment="header">SKMT</div>
 		<div layout:fragment="contents">
-			<table>
-				<tr>
-					<td>test001</td>
-					<td><a th:href="@{/test001}">データベース接続テスト テーブル参照</a></td>
-				</tr>
-				<tr>
-					<td>test002</td>
-					<td><a th:href="@{/test002}">データベース接続テスト テーブル作成</a></td>
-				</tr>
-			</table>
+			<a th:href="@{/login}">login</a>
 		</div>
 	</body>
 </html>
